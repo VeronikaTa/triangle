@@ -13,8 +13,23 @@ class Triangle {
         double lengthB = Math.sqrt(Math.pow((a.getX() - c.getX()),2) + (Math.pow((a.getY() - c.getY()),2)));
         double lengthC = Math.sqrt(Math.pow((b.getX() - a.getX()),2) + (Math.pow((b.getY() - a.getY()),2)));
 
-        if(!((lengthA + lengthB)>lengthC)){
-            throw new IllegalArgumentException();
+        if(lengthA > lengthB && lengthA > lengthC){
+
+            if(!(lengthB + lengthC >lengthA)){
+                throw new IllegalArgumentException();
+            }
+        }
+        if(lengthB > lengthA && lengthB > lengthC){
+
+            if(!(lengthC + lengthA >lengthB)){
+                throw new IllegalArgumentException();
+            }
+        }
+        if(lengthC > lengthA && lengthC > lengthB){
+
+            if(!(lengthB + lengthA >lengthC)){
+                throw new IllegalArgumentException();
+            }
         }
         Point vectorOne = new Point(b.getX() -  a.getX(), b.getY() - a.getY());
         Point vectorTwo = new Point(c.getX() - a.getX(), c.getY() - a.getY());
