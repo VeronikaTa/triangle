@@ -1,4 +1,4 @@
-package com.epam.rd.autotasks.triangle;
+package com.epam.training.student_veronika_tarasova.triangle.src.main.java.com.epam.rd.autotasks.triangle;
 
 class Point {
     private double x;
